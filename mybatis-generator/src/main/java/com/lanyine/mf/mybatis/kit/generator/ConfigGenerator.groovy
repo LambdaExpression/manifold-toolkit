@@ -84,13 +84,13 @@ class ConfigGenerator {
 
     def generateConfigXml() {
         def desktop=new File(desktopPath);
-		if(!desktop.exists()&&!desktop.isDirectory()){
-			try{
-				desktop.mkdir();
-			}catch(IOException e){
-				e.printStackTrace();
-			}
+	if(!desktop.exists()&&!desktop.isDirectory()){
+		try{
+			desktop.mkdir();
+		}catch(IOException e){
+			e.printStackTrace();
 		}
+	}
         def xml = new File(desktopPath, DB_NAME + "-Config.xml");
         if (xml.exists())
             xml.delete()
